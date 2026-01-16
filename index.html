@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Game Site</title>
+  <title>Click Game</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #111;
+      color: white;
+    }
+    button {
+      font-size: 30px;
+      padding: 20px 40px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:Arial">
+<body>
 
-  <h1>🎮 My Game Site</h1>
-  <p>If you can read this, your website works.</p>
+<h1>🎯 Click Test Game</h1>
+<p>Click the button as many times as you can.</p>
+
+<button onclick="add()">CLICK ME</button>
+
+<h2>Score: <span id="score">0</span></h2>
+
+<script>
+let score = 0;
+function add() {
+  score++;
+  document.getElementById("score").innerText = score;
+}
+</script>
 
 </body>
 </html>
